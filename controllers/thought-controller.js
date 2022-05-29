@@ -97,7 +97,7 @@ const thoughtController = {
     
 
 
-    
+
     removeThought({
         params
     }, res) {
@@ -161,7 +161,6 @@ const thoughtController = {
             })
             .catch(err => res.json(err));
     },
-
 
 
 
