@@ -129,7 +129,6 @@ const thoughtController = {
     },
 
 
-
     addReaction({
         params,
         body
