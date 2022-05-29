@@ -1,0 +1,23 @@
+{
+  "name": "nosql",
+  "version": "1.0.0",
+  "description": "Challenge18 - NoSQL Challenge: Social Network API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArbiNazari/NoSQL.git"
+  },
+  "author": "Arbi Nazari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArbiNazari/NoSQL/issues"
+  },
+  "homepage": "https://github.com/ArbiNazari/NoSQL#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.3.4"
+  }
+}

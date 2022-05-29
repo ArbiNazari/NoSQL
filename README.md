@@ -15,131 +15,149 @@
  
  Application Design and Function
 
- As a manager at an internet retail company, I want to a back end for
- my e-commerce website that uses the latest technologies so that my company 
- can compete with other e-commerce companies.
+As a social media startup, I want an API for my social network that uses a NoSQL database
+that my website can handle large amounts of unstructured data.
 
 
  # My Task and Application Requirments
 
-  - Given a functional Express.js API, I want to add database name, MySQL username, 
-    and MySQL password to an environment variable file.
+  - GIVEN a social network API - WHEN I enter the command to invoke the application.
 
-  - Then I want to be able to connect to a database using Sequelize when I I enter 
-    schema and seed commands.
+  - THEN my server is started and the Mongoose models are synced to the MongoDB database 
+    when I open API GET routes in Insomnia for users and thoughts.
 
-  - Then a development database is created and is seeded with test data when 
-    I enter the command to invoke the application.
-
-  - Then server is started and the Sequelize models are synced to the MySQL database when
-    I open API GET routes in Insomnia for categories, products, or tags
-
-  - Then the data for each of these routes is displayed in a formatted JSON when 
+  - Then the data for each of these routes is displayed in a formatted JSON when
     I test API POST, PUT, and DELETE routes in Insomnia.
 
-  - Then I am able to successfully create, update, and delete data in my database.
+  - Then I am able to successfully create, update, and delete users and 
+    thoughts in my database when I test API POST and DELETE routes in Insomnia.
 
-  Data Base Tags: 
+  - Then I am able to successfully create and delete reactions to thoughts 
+    and add and remove friends to a user’s friend list
 
-    Category
 
-        id
+  ## Models: 
 
-        Integer
+    # User
 
-        Doesn't allow null values
-
-        Set as primary key
-
-        Uses auto increment
-
-        category_name
-
+    username
         String
+        Unique
+        Required
+        Trimmed
 
-        Doesn't allow null values
-
-    Product
-
-        id
-
-        Integer
-
-        Doesn't allow null values
-
-        Set as primary key
-
-        Uses auto increment
-
-        product_name
-
+    email
         String
+        Required
+        Unique
+        Must match a valid email address (look into Mongoose's matching validation)
 
-        Doesn't allow null values
+    thoughts
+        Array of _id values referencing the Thought model
 
-        price
+    friends
+        Array of _id values referencing the User model (self-reference)
 
-        Decimal
+    # Thought
 
-        Doesn't allow null values
-
-        Validates that the value is a decimal
-
-        stock
-
-        Integer
-
-        Doesn't allow null values
-
-        Set a default value of 10
-
-        Validates that the value is numeric
-
-        category_id
-
-        Integer
-
-        References the category model's id
-
-    Tag
-
-        id
-
-        Integer
-
-        Doesn't allow null values
-
-        Set as primary key
-
-        Uses auto increment
-
-        tag_name
-
+    thoughtText
         String
+        Required
+        Must be between 1 and 280 characters
 
-    ProductTag
+    createdAt
+        Date
+        Set default value to the current timestamp
+        Use a getter method to format the timestamp on query
 
-        id
+    username (The user that created this thought)
+        String
+        Required
 
-        Integer
+    reactions (These are like replies)
+        Array of nested documents created with the reactionSchema
 
-        Doesn't allow null values
+# Schema Settings
 
-        Set as primary key
+Create a virtual called reactionCount that retrieves the length of the thought's reactions array field on query.
 
-        Uses auto increment
+   # Reaction (SCHEMA ONLY)
 
-        product_id
+    reactionId
+        Use Mongoose's ObjectId data type
+        Default value is set to a new ObjectId
 
-        Integer
+    reactionBody
+        String
+        Required
+        280 character maximum
 
-        References the product model's id
+    username
+        String
+        Required
 
-        tag_id
+    createdAt
+        Date
+        Set default value to the current timestamp
+        Use a getter method to format the timestamp on query
 
-        Integer
+# Schema Settings
 
-        References the tag model's id
+This will not be a model, but rather will be used as the reaction field's subdocument schema in the Thought model.
+
+## API Routes
+
+/api/users
+
+    GET all users
+
+    GET a single user by its _id and populated thought and friend data
+
+    POST a new user:
+
+// example data
+{
+  "username": "lernantino",
+  "email": "lernantino@gmail.com"
+}
+
+    PUT to update a user by its _id
+
+    DELETE to remove user by its _id
+
+# BONUS: Remove a user's associated thoughts when deleted.
+
+/api/users/:userId/friends/:friendId
+
+    POST to add a new friend to a user's friend list
+
+    DELETE to remove a friend from a user's friend list
+
+/api/thoughts
+
+    GET to get all thoughts
+
+    GET to get a single thought by its _id
+
+    POST to create a new thought (don't forget to push the created thought's _id to the associated user's thoughts array field)
+
+// example data
+{
+  "thoughtText": "Here's a cool thought...",
+  "username": "lernantino",
+  "userId": "5edff358a0fcb779aa7b118b"
+}
+
+    PUT to update a thought by its _id
+
+    DELETE to remove a thought by its _id
+
+/api/thoughts/:thoughtId/reactions
+
+    POST to create a reaction stored in a single thought's reactions array field
+
+    DELETE to pull and remove a reaction by the reaction's reactionId value
+
 
   
   ## [Video](#table-of-contents)
