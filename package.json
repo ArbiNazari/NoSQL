@@ -4,7 +4,8 @@
   "description": "Challenge18 - NoSQL Challenge: Social Network API",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/ArbiNazari/NoSQL#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "mongoose": "^6.3.4"
+    "mongoose": "^6.3.4",
+    "nodemon": "^2.0.16"
   }
 }
