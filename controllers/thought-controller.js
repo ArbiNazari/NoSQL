@@ -94,7 +94,6 @@ const thoughtController = {
     },
 
 
-    
     removeThought({
         params
     }, res) {
