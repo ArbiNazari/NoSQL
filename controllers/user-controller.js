@@ -5,8 +5,7 @@ const {
 const userController = {
 
 
-
-    
+  
     getAllUsers(req, res) {
         User.find({})
             .populate({
