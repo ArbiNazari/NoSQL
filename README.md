@@ -163,17 +163,6 @@ This will not be a model, but rather will be used as the reaction field's subdoc
   ## [Video](#table-of-contents)
  
    - Video Guide SEED & MYSQL- [video guide](https://www.awesomescreenshot.com/video/8212028?key=c7bd96a5e6b4bb979d54ddb8934fc0b9)
-   - Video Guide TAG Category - [video guide](https://www.awesomescreenshot.com/video/8212123?key=a60afa50b8fadb9d49c75aa3fe797bb2)
-   - Video Guide CATEGORIES- [video guide](https://www.awesomescreenshot.com/video/8212230?key=8a3ad80485591e8720a9b1203ed0ec0b)
-   - Video Guide  PRODUCTS- [video guide](https://www.awesomescreenshot.com/video/8212382?key=3eae5d0d234c70007d7a5bb48a37a8fa)
-
-![seeds](https://user-images.githubusercontent.com/95839411/161455641-10cb666c-642a-4ceb-a721-ab041bb722df.jpg)
-
-![Tags](https://user-images.githubusercontent.com/95839411/161455653-18fa75c7-bd58-478a-8c35-c9648332ec9e.jpg)
-
-![cat](https://user-images.githubusercontent.com/95839411/161455662-43d395e7-d015-4bfe-b263-f658d59809e7.jpg)
-
-![Products](https://user-images.githubusercontent.com/95839411/161455670-b0632254-803a-4f4f-b629-17a60a1a6b87.jpg)
 
 
   ## [License](#table-of-contents)
