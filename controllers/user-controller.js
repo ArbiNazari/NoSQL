@@ -35,7 +35,7 @@ const userController = {
         User.findOneAndDelete({_id: params.id})
         .then(userData => {
             if(!userData) {
-                res.status(404).json({ message: 'Incorrect Data });
+                res.status(404).json({ message: 'Incorrect Data' });
                 return;
             }
 
