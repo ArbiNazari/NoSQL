@@ -166,6 +166,16 @@ This will not be a model, but rather will be used as the reaction field's subdoc
    - Video Start- Thoughts Section- [video guide](https://www.awesomescreenshot.com/video/9287858?key=2f91f537a7debc129448d7fae1eb24bf)
 
 
+![1](https://user-images.githubusercontent.com/95839411/172073458-8fd0314f-3d4c-406e-9d2b-7afdae30cdb2.jpg)
+
+![2](https://user-images.githubusercontent.com/95839411/172073463-2882c542-ee6c-4f1b-8e70-3f1c2a771b93.jpg)
+
+![3](https://user-images.githubusercontent.com/95839411/172073468-a82183da-3b7d-4376-b2d3-07e58412e9c6.jpg)
+
+![4](https://user-images.githubusercontent.com/95839411/172073472-fc9cea88-c591-4887-8a05-6e8e15458f31.jpg)
+
+
+
   ## [License](#table-of-contents)
   The application is covered under the following license:
   
