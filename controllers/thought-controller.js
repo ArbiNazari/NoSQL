@@ -29,7 +29,7 @@ const thoughtController = {
             })
             .then(thoughtData => {
                 if (!thoughtData) {
-                    res.status(404).json({ message: 'Incorrect thought data!' });
+                    res.status(404).json({ message: 'Incorrect data' });
                     return;
                 }
                 res.json(dbPizzaData);
@@ -40,7 +40,7 @@ const thoughtController = {
         Thought.findByIdAndUpdate({ _id: params.thoughtId }, body, { runValidators: true, new: true })
             .then(thoughtData => {
                 if (!thoughtData) {
-                    res.status(404).json({ message: 'No user found with this ID!' });
+                    res.status(404).json({ message: 'No user found' });
                     return;
                 }
                 res.json(dbPizzaData);
@@ -51,7 +51,7 @@ const thoughtController = {
         Thought.findByIdAndDelete({ _id: params.thoughtId }, { runValidators: true, new: true })
             .then(thoughtData => {
                 if (!thoughtData) {
-                    res.status(404).json({ message: 'No user found with this ID!' });
+                    res.status(404).json({ message: 'No user found' });
                     return;
                 }
                 res.json(dbPizzaData);
@@ -66,7 +66,7 @@ const thoughtController = {
         )
         .then(thoughtData => {
             if (!thoughtData) {
-                res.status(404).json({ message: 'Incorrect reaction data!' });
+                res.status(404).json({ message: 'Incorrect Data' });
                 return;
             }
             res.json(dbPizzaData);
@@ -81,7 +81,7 @@ const thoughtController = {
         )
         .then(thoughtData => {
             if (!thoughtData) {
-                res.status(404).json({ message: 'Incorrect reaction data!' });
+                res.status(404).json({ message: 'Incorrect Data' });
                 return;
             }
             res.json(dbPizzaData);

@@ -23,7 +23,7 @@ const userController = {
         User.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
             .then(userData => {
                 if(!userData) {
-                    res.status(404).json({ message: 'No user found with this ID!' });
+                    res.status(404).json({ message: 'Incorrect Data' });
                     return;
                 }
 
@@ -35,7 +35,7 @@ const userController = {
         User.findOneAndDelete({_id: params.id})
         .then(userData => {
             if(!userData) {
-                res.status(404).json({ message: 'No user found with this ID!' });
+                res.status(404).json({ message: 'Incorrect Data });
                 return;
             }
 
@@ -51,7 +51,7 @@ const userController = {
         )
         .then(userData => {
             if(!userData) {
-                res.status(404).json({ message: 'No user found with this ID!' });
+                res.status(404).json({ message: 'Incorrect Data' });
                 return;
             }
             res.json(userData);
