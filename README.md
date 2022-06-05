@@ -162,7 +162,7 @@ This will not be a model, but rather will be used as the reaction field's subdoc
   
   ## [Video](#table-of-contents)
  
-   - Video Guide SEED & MYSQL- [video guide](https://www.awesomescreenshot.com/video/8212028?key=c7bd96a5e6b4bb979d54ddb8934fc0b9)
+   - Video Start- [video guide](https://www.awesomescreenshot.com/video/8212028?key=c7bd96a5e6b4bb979d54ddb8934fc0b9)
 
 
   ## [License](#table-of-contents)
