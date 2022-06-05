@@ -162,7 +162,8 @@ This will not be a model, but rather will be used as the reaction field's subdoc
   
   ## [Video](#table-of-contents)
  
-   - Video Start- [video guide](https://www.awesomescreenshot.com/video/8212028?key=c7bd96a5e6b4bb979d54ddb8934fc0b9)
+   - Video Start- Users Section- [video guide](https://www.awesomescreenshot.com/video/9287649?key=8578e4160bac2c071457a538745c3a65)
+   - Video Start- Thoughts Section- [video guide](https://www.awesomescreenshot.com/video/9287649?key=8578e4160bac2c071457a538745c3a65)
 
 
   ## [License](#table-of-contents)
